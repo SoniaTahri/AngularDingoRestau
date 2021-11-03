@@ -1,0 +1,147 @@
+<section class="flexslider" data-section="welcome">
+    <ul class="slides">
+      <li style="background-image: url(assets/img/hero_bg_1.jpg)" class="overlay" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
+                <h1 class="primary-heading">Welcome</h1>
+                <!-- <h3 class="secondary-heading">Sign up</h3> -->
+                <h3 class="secondary-heading">{{title}} CHEF</h3>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+   
+    </ul>
+  </section>
+
+<section class="probootstrap-section probootstrap-bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 probootstrap-animate">
+          <form class="probootstrap-form" [formGroup]="addchefForm">
+            
+        
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">First Name</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="text" id="firstName" class="form-control" placeholder="Your first name" formControlName="firstName">
+                  </div>
+                  <div>
+                    <div *ngIf="addchefForm.controls['firstName'].invalid && (addchefForm.controls['firstName'].touched || addchefForm.controls['firstName'].dirty)">
+                      <div *ngIf="addchefForm.controls['firstName'].errors.required" style="color: red;">First Name is required</div>
+                      <div *ngIf="addchefForm.controls['firstName'].errors.minlength" style="color: red;">First Name must be at least 4 caracters</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">Last Name</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="text" id="name" class="form-control" placeholder="Your last name"  formControlName="lastName">
+                  </div>
+                  <div>
+                    <div *ngIf="addchefForm.controls['lastName'].invalid && (addchefForm.controls['lastName'].touched || addchefForm.controls['lastName'].dirty)">
+                      <div *ngIf="addchefForm.controls['lastName'].errors.required" style="color: red;">Last Name is required</div>
+                      <div *ngIf="addchefForm.controls['lastName'].errors.minlength" style="color: red;"1>Last Name must be at least 4 caracters</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="form-field">
+                    <i class="icon icon-mail"></i>
+                    <input type="email" id="email" class="form-control" placeholder="Your email address"  formControlName="email">
+                  </div>
+                  <div>
+                    <div *ngIf="addchefForm.controls['email'].invalid && (addchefForm.controls['email'].touched || addchefForm.controls['email'].dirty)">
+                      <div *ngIf="addchefForm.controls['email'].errors.required" style="color: red;">Email is required</div>
+                      <div *ngIf="addchefForm.controls['email'].errors.email" style="color: red;">Email format not valid</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">specialitée</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="text" id="specialite" class="form-control" placeholder="specialitée"  formControlName="specialite">
+                  </div>
+                  <div>
+                    <div *ngIf="addchefForm.controls['specialite'].invalid && (addchefForm.controls['specialite'].touched || addchefForm.controls['specialite'].dirty)">
+                      <div *ngIf="addchefForm.controls['specialite'].errors.required" style="color: red;">specialitée is required</div>
+                      <div *ngIf="addchefForm.controls['specialite'].errors.minlength" style="color: red;">specialitée must be at least 6 caracters</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">Experience</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="text" id="experience" class="form-control" placeholder="Your experience"  formControlName="experience">
+                  </div>
+                  <div>
+                    <div *ngIf="addchefForm.controls['experience'].invalid && (addchefForm.controls['experience'].touched || addchefForm.controls['experience'].dirty)">
+                      <div *ngIf="addchefForm.controls['experience'].errors.required" style="color: red;">Last experience is required</div>
+                      <!-- <div *ngIf="addchefForm.controls['experience'].errors.minlength" style="color: red;">experience must be at least 6 caracters</div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <div class="form-field">
+                    <i class="icon icon-phone"></i>
+                    <input type="text" id="phone" class="form-control" placeholder="Your phone"  formControlName="phone" >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">Password</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="password" id="pwd" class="form-control" placeholder="Your password"  formControlName="pwd">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">Confirm Password</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <input type="password" id="cpwd" class="form-control" placeholder=" confirm password"  formControlName="cpwd">
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+                <button class="btn btn-lg btn-primary btn-block" (click)="addChef(addchefForm.value)" >{{title}} CHEF </button>
+              </div>
+            </div>
+            
+          </form>
+
+          <!-- <div>
+            <img [src]="source" alt="desc">
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>

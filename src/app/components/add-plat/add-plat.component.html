@@ -1,0 +1,70 @@
+<section class="flexslider" data-section="welcome">
+    <ul class="slides">
+      <li style="background-image: url(assets/img/hero_bg_1.jpg)" class="overlay" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
+                <h1 class="primary-heading">Welcome</h1>
+                <h3 class="secondary-heading">{{title}} plat</h3>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+   
+    </ul>
+  </section>
+
+<section class="probootstrap-section probootstrap-bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 probootstrap-animate">
+          <form class="probootstrap-form" #platform="ngForm" (ngSubmit)="addplat()">
+            
+        
+            <div class="col-md-12">
+                <div class="form-group">
+                  <label for="email">plat</label>
+                  <div class="form-field">
+                    <i class="icon icon-mail"></i>
+                    <input type="text"  class="form-control" placeholder="Your name " [(ngModel)]="plat.platName" [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div>
+              </div>
+             
+             
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">description</label>
+                  <div class="form-field">
+                    <i class="icon icon-user2"></i>
+                    <textarea class="form-control" placeholder="Your description" [(ngModel)]="plat.desc"  [ngModelOptions]="{standalone: true}"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">price</label>
+                  <div class="form-field">
+                    <i class="icon icon-plat2"></i>
+                    <input type="text" id="name" class="form-control" placeholder="Your price" [(ngModel)]="plat.price"  [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div>
+              </div>
+              
+            
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+
+                <button type="submit"  class="btn btn-lg btn-primary btn-block" >{{title}} plat </button>
+              </div>
+            </div>
+            
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </section>
